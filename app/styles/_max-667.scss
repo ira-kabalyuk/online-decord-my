@@ -1,0 +1,13 @@
+$icon-font-path: '../fonts/';
+
+@import "_includs";
+
+@media only screen and (max-width: 667px) {
+
+    .info-block {
+        width: 100%;
+        margin: 0;
+        padding: 30px;        
+    }
+
+}	

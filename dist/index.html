@@ -1,0 +1,182 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+	<!doctype html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Page</title>
+
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<!-- Place favicon.ico in the root directory -->
+
+
+	<link rel="stylesheet" href="styles/main.css">
+	  
+</head>
+		
+
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="wrapper">
+			<header class="header">      
+	<div class="pagewrap">
+        <div class="header-block center">
+            <button class="location" data-toggle="modal" data-target="#modalLoc">
+                <i class="fa fa-map-marker"></i>
+            </button>
+        </div>
+        <div class="login-block">
+            <span class="login" data-toggle="modal" data-target="#modalLogin">Войти</span>
+        </div>
+    </div>
+</header>    	
+		
+			
+	<main class="main main-page">		
+		<div class="main-block">			
+			<div class="img-wrap main-bg">
+					<img src="images/photo-2.jpg" alt="">
+				</div>
+				<div class="pagewrap">
+					<div class="main-title-block">
+						<h1 class="title">Название салона</h1>
+					<div class="logo-block">
+						<img src="images/logo.png" alt="">
+					</div>					
+					<div class="button-wrap">
+						<a href="select-service.html" class="button trans">Заказать услугу</a>
+						<a href="" class="button mt trans">История посещений</a>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</main>
+	  
+		
+			<footer class="footer">      
+	
+</footer>    	
+		</div>
+
+			
+    <script src="scripts/vendor.js"></script>
+
+    <script src="scripts/plugins.js"></script>
+
+    
+   
+    <script src="scripts/main.js"></script>
+	
+
+		
+		<!-- Modal login-->
+<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Вход</h4>
+            </div>
+            <div class="modal-body">
+                <form class="modal-wrap-block">
+                    <div class="input-block mb error">
+                       <input type="text" class="input" placeholder="E-mail">
+                       <p class="error-text">Неверные данные</p>
+                    </div>
+                    <div class="input-block mb">
+                        <input type="text" class="input" placeholder="Пароль">                        
+                    </div>
+                    <div class="checkbox-block">
+                        <input type="checkbox" class="checkbox">
+                        <label for="" class="label ml">Запомнить меня</label>
+                    </div>
+                    <button class="form-button mt trans">Войти</button>
+                    <div class="link-block mt center">
+                        <a href="" class="link">Забыли пароль?</a>
+                    </div>
+                </form>
+            </div>       
+        </div>
+    </div>
+</div>
+		<!-- Modal login-->
+<div class="modal fade" id="modalLoc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Контакты</h4>
+        </div>
+            <div class="modal-body">
+                <div class="content-block">
+                    <h2 class="content-title">Адрес:</h2>
+                    <p>г. Киев, ул. Бориса Гмыри-2</p>
+                    <a href="">Посмотреть на карте</a>
+                </div>
+                <div class="content-block">
+                    <h2 class="content-title">Телефоны:</h2>
+                    <a href="tel:+3(8097)9925547" class="block">+38(097)-992-00-00</a>
+                    <a href="tel:+3(8097)9925547" class="block">+38(097)-992-00-00</a>
+                </div>
+                <div class="content-block">
+                    <h2 class="content-title">E-mail</h2>                    
+                    <a href="mailto:yourmail@mysite.com" class="block">yourmail@mysite.com</a>
+                </div>
+                <div class="content-block">
+                    <h2 class="content-title">Режим работы:</h2>                    
+                    <p> 9.00 - 20.00. Без выходных</p>
+                </div>
+            </div>        
+        </div>
+    </div>
+</div>	
+		<!-- Modal login-->
+<div class="modal fade" id="modalDat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Выбор даты</h4>                
+            </div>
+            <div class="modal-body">
+                    <div class="form-group">
+                        <div class='input-group date' id='datetimepicker'>                               
+                           
+                        </div>
+                    </div>
+            </div>       
+        </div>
+    </div>
+</div>	
+		<!-- Modal login-->
+<div class="modal fade" id="modalTime" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Выбор времени</h4>                
+            </div>
+            <div class="modal-body">
+                 <div class="time-button-wrap">
+                     <button class="time-btn">9.00-10.00</button>
+                     <button class="time-btn">10.00-11.00</button>
+                     <button class="time-btn disabled">11.00-12.00</button>
+                     <button class="time-btn">12.00-13.00</button>
+                     <button class="time-btn">13.00-14.00</button>
+                     <button class="time-btn">9.00-10.00</button>
+                     <button class="time-btn">10.00-11.00</button>
+                     <button class="time-btn">11.00-12.00</button>
+                     <button class="time-btn">12.00-13.00</button>
+                     <button class="time-btn disabled">13.00-14.00</button>
+                 </div>   
+            </div>       
+        </div>
+    </div>
+</div>		
+  </body>
+</html>

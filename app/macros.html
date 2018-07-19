@@ -1,0 +1,1633 @@
+
+{% macro layotColumn(className=" top column__2-3 column__pink white img-column column__no-padding", titleBlue=false, titlePink=true, newsList=false, contentList=true, showButton=true, showShadow=true, showSort=false, showTopImg=true, imgPath="images/img-5.jpg") %}
+<div class="{{className}} column column__layot-publication">	
+	 {% if showShadow %}
+			<div class="all-shadow"></div>
+		{% endif %} 
+		{% if titlePink %}
+			<h3 class="content-title content-title__pink content-title__left animated-in-fadeIn">Публикации</h3>
+		{% endif %}
+		{% if titleBlue %}
+			<h3 class="content-title content-title__blue content-title__left animated-in-fadeIn">Новости</h3>
+		{% endif %}
+	{% if showTopImg %}	
+	<div class="img-wrap animated-in-fadeIn">   
+		<img src="{{imgPath}}" alt="">    							
+	</div>
+	{% endif %} 
+	<div class="column__wrap_right white animated-in-fadeIn">
+		 {% if showSort %}		
+			<div class="sort">
+				<span class="sort__text">сортировать по:</span>
+				<select>
+					<option data-display="по дате добавления">05.06.2017</option>
+					<option value="1">25.06.2017</option>
+					<option value="2">15.06.2017</option>
+					<option value="3" disabled>05.06.2017</option>
+					<option value="4">15.06.2017</option>
+				</select>	
+				<span class="sort__value">Популярности</span>				
+		</div>
+		{% endif %} 
+		
+		<div class="content-label-wrap">
+			<a href="" class="content-label content-label__blue">Покупка салона красоты</a> 
+		</div>
+		<h2 class="title-md">Стандарты сервиса салона красоты или правда о любви к клиентам</h2>
+		<div class="info-block flex">
+				<div class="autor-block">
+						<img src="images/img-2.jpg" alt="">
+						<a href="" class="autor-name">Иван Петропавловский</a>
+				</div>	
+				<div class="column__info-wrap">		 							
+						<div class="data-block">
+								<span class="data"><i class="fa fa-calendar"></i>04 февраля 2018</span>
+						</div>
+					<div class="comment-block">
+										<i class="fa fa-comment-o" aria-hidden="true"></i>
+										<span class="comment">1</span>
+						</div>
+						<div class="loock-block">
+										<i class="fa fa-eye" aria-hidden="true"></i>
+										<span class="loock">1428</span>
+						</div>
+				 </div>											
+		</div>
+		
+			{% if contentList %}
+				{% include "content-list.html" %}	
+			{% endif %}	
+			{% if newsList %}
+				{% include "news-list.html" %}	
+			{% endif %}	
+		{% if showButton %}
+			<a href="#" class="button hvr-rectangle-out button__md-blue-transparent arrow animated-in-zoomIn">Все публикации</a>
+		{% endif %}							
+	</div>															
+</div>
+{% endmacro %}	
+
+{% macro sidebar(className="sidebar", sidebarCalendarEvent=false, sidebarTagBlock=false, sidebarWorkBlock=false, sidebarVacansiesBlock=false, sidebarMainImgBlock=true, sidebarMainImgBlockNoCenter=false, sidebarBrandsBlock=false, sidebarProductBlock=false, sidebarExhibitionBlock=false, sidebarEventBlock=false, formblock=false, sidebarColBlock=true, sidebarImgBlock=true, sidebarPopBlock=true) %}
+	<sidebar class="{{className}}">		
+			{% if sidebarMainImgBlock %}	
+				<div class="sadow-section center column column__img-wrap img-wrap img-wrap__gradient animated-in-fadeIn">
+					<div class="all-shadow"></div>
+						<img src="images/img-1.jpg" alt="">
+						<!--<div class="column-label">
+								<img src="images/label-1.png" alt="">
+						</div>-->
+				</div>
+			{% endif %}
+
+			{% if sidebarMainImgBlockNoCenter %}	
+				<div class="sadow-section column column__img-wrap img-wrap img-wrap__gradient animated-in-fadeIn">
+					<div class="all-shadow"></div>
+						<img src="images/img-1.jpg" alt="">
+						<!--<div class="column-label">
+								<img src="images/label-1.png" alt="">
+						</div>-->
+				</div>
+			{% endif %}
+
+			{% if sidebarTagBlock %}
+			<div class="column column__blue column__padding m-bottom">	
+					<div class="all-shadow"></div>							
+					<h3 class="content-title content-title__blue content-title__left">Популярное сейчас</h3>
+					<div class="column-block column-block__thin animated-in-fadeIn">
+						<div class="column-block__wrap">
+								<a href="" class="tag-link light-pink-bg trans">#стартапы</a> 
+								<a href="" class="tag-link pink-bg trans">#работа</a> 
+								<a href="" class="tag-link pink-bdr trans">#будущее</a> 
+								<a href="" class="tag-link light-blue-bg trans">#кейсы</a> 
+								<a href="" class="tag-link blue-bg trans">#дизайн</a> 				
+								<a href="" class="tag-link blue-bdr trans">#салон красоты</a> 
+								<a href="" class="tag-link md-blue-bg trans">#CRM</a> 
+								<a href="" class="tag-link md-blue-brd trans">#обучение</a>
+								<a href="" class="tag-link dark-blue-bg trans">#CRM</a> 
+								<a href="" class="tag-link dark-blue-brd trans">#обучение</a> 	 										
+						</div>						
+					</div>																		
+						<a href="#" class="button hvr-rectangle-out button__blue-transparent arrow animated-in-zoomIn is-hidden visible animated zoomIn full-visible" data-toggle="modal" data-target="#modalTag">Все теги</a>				
+				</div>
+				{% endif %}
+
+				{% if sidebarExhibitionBlock %}	
+				<div class="sadow-section column animated-in-fadeIn">
+				<div class="all-shadow"></div>
+					<div class="sidebar__exhibition-block">
+						<div class="exhibition-section__right-column white">
+							<div class="img-wrap">
+								<img src="images/img-1.jpg" alt="">
+							</div>
+							<div class="exhibition-section__right-column-content-wrap">
+								<a href="" class="title-20">Суперпредложения от наших поставщиков плоек</a>
+								<p class="text-16">Только сейчас - перейди по ссылке и получи вагон плоек для своего салона в два раза дешевле.</p>
+								<div class="button-wrap">
+									<a href="#" class="button hvr-rectangle-out button__white-dark-blue arrow trans">Посмотреть</a>
+								</div>							
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endif %}
+			{% if sidebarPopBlock %}		
+			<div class="sadow-section column column__blue column__padding animated-in-fadeIn">
+				<div class="all-shadow"></div>												
+				<h3 class="content-title content-title__blue content-title__left">Популярные</h3>				
+				<div class="column-block column-block__thin animated-in-fadeIn">
+					<div class="column-block__wrap flex">
+						<div class="img-wrap">
+							<img src="images/img-1.jpg" alt="">
+						</div>
+						<div class="column-block__content-wrap">
+							<a href="#" class="text-17 trans">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+							<div class="data-block">
+								<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+							</div>
+							<div class="tags-block">
+								<a href="#" class="tag">#Управление салонами</a>
+							</div>
+						</div>							
+					</div>						
+				</div>
+				<div class="column-block column-block__thin animated-in-fadeIn">
+					<div class="column-block__wrap flex">
+						<div class="img-wrap">
+							<img src="images/img-2.jpg" alt="">
+						</div>
+						<div class="column-block__content-wrap">
+							<a href="#" class="text-17 trans">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+							<div class="data-block">
+								<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+							</div>
+							<div class="tags-block">
+								<a href="#" class="tag">#Управление салонами</a>
+								<a href="#" class="tag">#Советы юриста</a>
+							</div>
+						</div>																
+					</div>						
+				</div>
+				<div class="column-block column-block__thin animated-in-fadeIn">
+						<div class="column-block__wrap flex">
+							<div class="img-wrap">
+								<img src="images/img-2.jpg" alt="">
+							</div>
+							<div class="column-block__content-wrap">
+								<a href="#" class="text-17 trans">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+								<div class="tags-block">
+									<a href="#" class="tag">#Управление салонами</a>
+									<a href="#" class="tag">#Советы юриста</a>
+								</div>
+							</div>																
+						</div>						
+					</div>		
+			</div>
+			{% endif %}
+
+			{% if sidebarImgBlock %}
+			<div class="sadow-section column column__img-wrap img-wrap animated-in-fadeIn">
+				<div class="all-shadow"></div>
+				<img src="images/img-11.jpg" alt="">
+				<!--<div class="column-label">
+						<img src="images/label-2.png" alt="">
+				</div>-->
+			</div>
+			{% endif %}
+
+			{% if sidebarColBlock %}
+			<div class="sadow-section column column__blue column__padding animated-in-fadeIn">
+				<div class="all-shadow"></div>									
+				<h3 class="content-title content-title__dark-blue content-title__right">Обсуждаемые</h3>
+				<div class="column-block column-block__thin animated-in-fadeIn">
+					<div class="column-block__wrap flex">
+						<div class="img-wrap">
+							<img src="images/img-1.jpg" alt="">
+						</div>
+						<div class="column-block__content-wrap">
+							<a href="#" class="text-17 trans">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+							<div class="data-block">
+								<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+							</div>
+							<div class="tags-block">
+								<a href="#" class="tag">#Управление салонами</a>
+							</div>
+						</div>							
+					</div>						
+				</div>
+				<div class="column-block column-block__thin animated-in-fadeIn">
+					<div class="column-block__wrap flex">
+						<div class="img-wrap">
+							<img src="images/img-2.jpg" alt="">
+						</div>
+						<div class="column-block__content-wrap">
+							<a href="#" class="text-17 trans">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+							<div class="data-block">
+								<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+							</div>
+							<div class="tags-block">
+								<a href="#" class="tag">#Управление салонами</a>
+								<a href="#" class="tag">#Советы юриста</a>
+							</div>
+						</div>																
+					</div>						
+				</div>
+				<div class="column-block column-block__thin animated-in-fadeIn">
+						<div class="column-block__wrap flex">
+							<div class="img-wrap">
+								<img src="images/img-2.jpg" alt="">
+							</div>
+							<div class="column-block__content-wrap">
+								<a href="#" class="text-17 trans">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+								<div class="tags-block">
+									<a href="#" class="tag">#Управление салонами</a>
+									<a href="#" class="tag">#Советы юриста</a>
+								</div>
+							</div>																
+						</div>						
+					</div>
+					
+			</div>
+			{% endif %}
+
+			{% if sidebarCalendarEvent %}
+			<div class="sadow-section sidebar__calendar-event-block animated-in-fadeIn">
+				<div class="all-shadow"></div>
+				<div class="calendar-banner__block animated-in-pulse is-hidden">						
+						<img src="images/banner-1.jpg" alt="">
+						<div class="calendar-banner__wrap">
+							<i class="calendar-icon"></i>
+							<h3 class="title-lg title-lg__thin title-lg__white">Все события <span>Beauty индустрии</span> в одном календаре</h3>
+							<a href="" class="button hvr-rectangle-out button__blue-pink trans">Открыть календарь</a>
+						</div>						
+					</div>
+			</div>
+			{% endif %}
+
+			{% if sidebarEventBlock %}
+			<div class="sadow-section sidebar__event-block animated-in-fadeIn">
+				<div class="all-shadow"></div>
+				<span class="block-label block-label__blue">топ-событие</span>				
+				<div class="event__block">
+					<img src="images/img-6.jpg" alt="">					
+					<div class="event__content-wrap">
+						<span class="event__label dark-blue">Семинар</span>
+						<h3 class="title-lg title-lg__thin title-lg__white">Почему мастера уходят из салонов красоты?</h3>
+						<p class="text-16">Инвестиция в салонный бизнес всегда считалась хорошим вложением денег в Украине. Спрос на услуги постоянный.</p>
+						<div class="info-block flex">
+							<span class="text-14">Организатор</span>
+							<div class="data-block">
+								<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+							</div>
+							<span class="text-14">Ивано-Франковск, Бизнес центр</span>													
+						</div>
+					</div>
+					<div class="label-block label-block__dark-blue">
+						<span class="label-block__price">1500 грн</span>
+						<a href="#" class="button hvr-rectangle-out button__white-blue trans">Записаться</a>
+						<a href="" class="label-block__link trans">
+							<i class="fa fa-plus" aria-hidden="true"></i>добавить в
+							<span>Google Календарь</span>
+						</a>
+					</div>									
+				</div>				
+			</div>
+			{% endif %}
+
+			{% if sidebarProductBlock %}
+				<div class="sadow-section sidebar__product-block animated-in-fadeIn">	
+				<div class="all-shadow"></div>			
+					<div class="column column__blue column__padding">
+						<h3 class="content-title content-title__dark-blue content-title__right">Топ-товары</h3>
+							<div class="column-block column-block__thin animated-in-fadeIn">
+								<div class="column-block__wrap flex">
+									<div class="img-wrap">
+										<img src="images/prod-1.jpg" alt="">
+									</div>
+									<div class="column-block__content-wrap">
+										<a href="#" class="text-17 trans">Фен Phillips MK-45 20 баклажановый BBQ</a>							
+										<p class="exhibition__description">Парикмахерам</p>
+									</div>							
+								</div>												
+							</div>
+							<div class="column-block column-block__thin animated-in-fadeIn">
+								<div class="column-block__wrap flex">
+									<div class="img-wrap">
+										<img src="images/prod-2.jpg" alt="">
+									</div>
+									<div class="column-block__content-wrap">
+										<a href="#" class="text-17 trans">Фен Phillips MK-45 20 баклажановый BBQ</a>							
+										<p class="exhibition__description">Парикмахерам</p>
+									</div>							
+								</div>												
+							</div>
+							<div class="column-block column-block__thin animated-in-fadeIn">
+								<div class="column-block__wrap flex">
+									<div class="img-wrap">
+										<img src="images/prod-3.jpg" alt="">
+									</div>
+									<div class="column-block__content-wrap">
+										<a href="#" class="text-17 trans">Фен Phillips</a>							
+										<p class="exhibition__description">Парикмахерам и визажистам</p>
+									</div>							
+								</div>												
+							</div>
+							<div class="column-block column-block__thin animated-in-fadeIn">
+								<div class="column-block__wrap flex">
+									<div class="img-wrap">
+										<img src="images/prod-4.jpg" alt="">
+									</div>
+									<div class="column-block__content-wrap">
+										<a href="#" class="text-17 trans">Фен Phillips MK-45 20 баклажановый BBQ</a>							
+										<p class="exhibition__description">Парикмахерам</p>
+									</div>							
+								</div>												
+							</div>
+						</div>
+				</div>
+			{% endif %}
+
+			{% if formblock %}
+			<div class="sadow-section sidebar__form-block animated-in-fadeIn">	
+				<div class="all-shadow"></div>			
+				<div class="column column__blue column__padding">
+					<h3 class="content-title content-title__blue content-title__right">Рассылка</h3>
+					<p class="title-20 title-20__dark-blue">Получайте новые публикации на<span> Вашу почту</span></p>
+					<form action="" class="main-form-block__form">															
+						<input type="text" class="main-form-block__input" placeholder="E-Mail">				
+						<button class="button hvr-rectangle-out button__pink-transparent trans">Подписаться</button>						
+					</form>
+				</div>
+			</div>
+			{% endif %}	
+
+			{% if sidebarBrandsBlock %}	
+				<div class="sadow-section sidebar__brands-block animated-in-fadeIn">	
+					<div class="all-shadow"></div>			
+					<div class="column column__blue column__padding">
+						<h3 class="content-title content-title__dark-blue content-title__right">Бренды</h3>
+						<ul class="brands__list">
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-1.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-2.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-3.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-4.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-5.png" alt="">
+											</a>
+									</li>						
+					
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-6.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-7.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-8.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-9.png" alt="">
+											</a>
+									</li>                                                                             
+							</ul>
+					</div>
+				</div>
+			{% endif %}
+
+			{% if sidebarWorkBlock %}	
+				<div class="sadow-section sidebar__brands-block animated-in-fadeIn">	
+					<div class="all-shadow"></div>			
+					<div class="column column__blue column__padding">
+						<h3 class="content-title content-title__dark-blue content-title__right">Топ-работодатели</h3>
+						<ul class="brands__list">
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-1.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-2.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-3.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-4.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-5.png" alt="">
+											</a>
+									</li>						
+					
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-6.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-7.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-8.png" alt="">
+											</a>
+									</li>
+									<li class="brands__item animated-in-fadeIn">
+											<a href="">
+													<img src="images/brand-9.png" alt="">
+											</a>
+									</li>                                                                             
+							</ul>
+					</div>
+				</div>
+			{% endif %}
+
+			{% if sidebarVacansiesBlock %}
+			<div class="sadow-section sidebar__vacansies-block animated-in-fadeIn">	
+				<div class="all-shadow"></div>
+				<div class="column column__blue column__padding">
+					<h3 class="content-title content-title__blue content-title__right">Горячие вакансии</h3>
+					<div class="vacansies__layot-block">
+						<div class="vacansies__block hot animated-in-fadeIn"> <!--класс hot для появления звездочки на горячей вакансии-->
+								<div class="vacansies__wrap">
+										<div class="vacansies__description-block"> 
+											<a href="" class="vacansies__name trans">
+													<i class="fa fa-star" aria-hidden="true"></i>
+													Копирайтер, рерайтер, контент-менеджер, администратор сайта
+													</a>																																			
+											</div>
+												<div class="info-block">
+													<span>Юг-Контакт</span>
+													<span>Ивано-франковск</span>
+													<span>вчера</span>
+												</div>														
+								</div>																		
+						</div>
+						<div class="vacansies__block hot animated-in-fadeIn"> <!--класс hot для появления звездочки на горячей вакансии-->
+									<div class="vacansies__wrap">
+											<div class="vacansies__description-block"> 
+												<a href="" class="vacansies__name trans">
+														<i class="fa fa-star" aria-hidden="true"></i>
+														Копирайтер, рерайтер, контент-менеджер, администратор сайта
+														</a>																																	
+												</div>
+													<div class="info-block">
+														<span>Юг-Контакт</span>
+														<span>Ивано-франковск</span>
+														<span>вчера</span>
+													</div>														
+										</div>																		
+								</div>
+							<div class="vacansies__block hot animated-in-fadeIn"> <!--класс hot для появления звездочки на горячей вакансии-->
+										<div class="vacansies__wrap">
+												<div class="vacansies__description-block"> 
+													<a href="" class="vacansies__name trans">
+															<i class="fa fa-star" aria-hidden="true"></i>
+															Копирайтер, рерайтер, контент-менеджер, администратор сайта
+															</a>																																				
+													</div>
+														<div class="info-block">
+															<span>Юг-Контакт</span>
+															<span>Ивано-франковск</span>
+															<span>вчера</span>
+														</div>														
+										</div>																		
+								</div>
+								<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все вакансии</a>									
+							</div>	
+						</div>
+			</div>				
+			{% endif %}	
+	</sidebar>
+{% endmacro %}
+
+{% macro column(className="column__blue column__pink content-title__left content-title__right", showbBLueTitle=true, showbDarkBLueTitle=false, showPinkTitle=false) %}		
+	<div class="column {{className}} column__padding">
+		{% if showbBLueTitle %}									
+			<h3 class="content-title content-title__blue {{className}}">Популярные</h3>
+		{% endif %}
+		{% if showbDarkBLueTitle %}									
+		<h3 class="content-title content-title__dark-blue {{className}}">Обсуждаемые</h3>
+		{% endif %}
+		{% if showPinkTitle %}									
+			<h3 class="content-title content-title__pink {{className}}">Популярные</h3>
+		{% endif %}
+		<div class="column-block column-block__thin">
+			<div class="column-block__wrap flex">
+				<div class="img-wrap">
+					<img src="images/img-1.jpg" alt="">
+				</div>
+				<div class="column-block__content-wrap">
+					<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+					<div class="data-block">
+						<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+					</div>
+					<div class="comment-block">
+							<i class="fa fa-comment-o" aria-hidden="true"></i>
+							<span class="comment">2555</span>
+					</div>
+					<div class="tags-block">
+						<a href="#" class="tag">#Управление салонами</a>
+					</div>
+				</div>							
+			</div>						
+		</div>
+		<div class="column-block column-block__thin">
+			<div class="column-block__wrap flex">
+				<div class="img-wrap">
+					<img src="images/img-2.jpg" alt="">
+				</div>
+				<div class="column-block__content-wrap">
+					<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+					<div class="data-block">
+						<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+					</div>
+					<div class="comment-block">
+							<i class="fa fa-comment-o" aria-hidden="true"></i>
+							<span class="comment">2555</span>
+					</div>
+					<div class="tags-block">
+						<a href="#" class="tag">#Управление салонами</a>
+						<a href="#" class="tag">#Советы юриста</a>
+					</div>
+				</div>																
+			</div>						
+		</div>
+		<div class="column-block column-block__thin">
+				<div class="column-block__wrap flex">
+					<div class="img-wrap">
+						<img src="images/img-2.jpg" alt="">
+					</div>
+					<div class="column-block__content-wrap">
+						<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+						<div class="data-block">
+							<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+						</div>
+						<div class="comment-block">
+								<i class="fa fa-comment-o" aria-hidden="true"></i>
+								<span class="comment">2555</span>
+						</div>
+						<div class="tags-block">
+							<a href="#" class="tag">#Управление салонами</a>
+							<a href="#" class="tag">#Советы юриста</a>
+						</div>
+					</div>																
+				</div>						
+			</div>		
+	</div>
+	{% endmacro %}	
+
+{% macro tabBlock(className="column__1-3 column__1-2", showTabHorisontal=false, showTabVertical=true, tabCount=true, showTabBtn=true) %}
+	<ul class="tabs">   
+		<li class="active" rel="tab1">Работа с персоналом</li>
+		<li rel="tab2">Свой салон</li>
+		<li rel="tab3">Оборудование</li>
+		<li rel="tab4">Поставщики</li>
+		<li rel="tab5">Покупка салона</li>     
+		<li rel="tab6">Мастера</li>
+		{% if tabCount %}
+		<li rel="tab7">Франшиза</li>
+		{% endif %}       
+	</ul>			
+	<div class="tab_container">
+		<h3 class="d_active tab_drawer_heading" rel="tab1">Работа с персоналом</h3>
+		<div id="tab1" class="tab_content">
+			<div class="column-wrap flex">
+					<div class="column {{className}} column__no-padding animated-in-flipInX">
+						<span class="title-label">Актуальная тема</span>
+						<h2 class="title-lg title-lg__thin title-lg__white">Покупка салона красоты</h2>						
+						<p class="text-16 text-16__light-blue">Инвестиция в салонный бизнес всегда считалась хорошим вложением денег в Украине. Спрос на услуги постоянный.</p>
+						{% if showTabBtn %}
+							<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>
+						{% endif %}
+					</div>
+					{% if showTabHorisontal %}
+					<div class="tab_container__right-block_horisontal column__2-3 column__no-padding">
+						<div class="column column__1-2 column__no-padding white img-column animated-in-flipInX-1">            
+							<div class="img-wrap">
+								<img src="images/img-3.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Купить салон красоты или открыть с нуля: оценка и форма заявки</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="column__info-wrap">
+										<div class="data-block">
+											<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+											
+										</div>
+										<div class="comment-block">
+												<i class="fa fa-comment-o" aria-hidden="true"></i>
+												<span class="comment">2555</span>
+										</div>
+										<div class="loock-block">
+												<i class="fa fa-eye" aria-hidden="true"></i>
+												<span class="loock">255</span>
+										</div>
+									</div>
+							</div>           
+						</div>
+						<div class="column column__1-2 column__no-padding white img-column animated-in-flipInX-2">           
+							<div class="img-wrap">
+								<img src="images/img-4.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Intercharm украина-2015: консультации по открытию и развитию салонов красоты</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="column__info-wrap">
+										<div class="data-block">
+											<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+											
+										</div>
+										<div class="comment-block">
+												<i class="fa fa-comment-o" aria-hidden="true"></i>
+												<span class="comment">2555</span>
+										</div>
+										<div class="loock-block">
+												<i class="fa fa-eye" aria-hidden="true"></i>
+												<span class="loock">255</span>
+										</div>
+									</div>
+							</div>           
+						</div>
+					</div>
+					{% endif %}
+
+					{% if showTabVertical %}
+					<div class="tab_container__right-block_vertical column__1-2 column__no-padding">
+						<div class="column column-block column__no-padding white animated-in-flipInX-1">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div>        
+						</div>
+						<div class="column column-block column__no-padding white animated-in-flipInX-2">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div> 
+						</div>
+						<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>                   
+					</div>
+			{% endif %} 
+			</div>
+		</div> 
+			
+		<!-- #tab1 -->
+		<h3 class="tab_drawer_heading" rel="tab2">Свой салон</h3>
+		 <div id="tab2" class="tab_content">
+			<div class="column-wrap flex">
+					<div class="column {{className}} column__no-padding">
+						<span class="title-label">Свой салон</span>
+						<h2 class="title-lg title-lg__thin title-lg__white">Покупка салона красоты</h2>
+						<p class="text-16 text-16__light-blue">Инвестиция в салонный бизнес всегда считалась хорошим вложением денег в Украине. Спрос на услуги постоянный.</p>
+						{% if showTabBtn %}
+							<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>
+						{% endif %}
+					</div>
+					{% if showTabHorisontal %}
+					<div class="tab_container__right-block_horisontal column__2-3 column__no-padding">
+						<div class="column column__1-2 column__no-padding white img-column">            
+							<div class="img-wrap">
+								<img src="images/img-3.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Купить салон красоты или открыть с нуля: оценка и форма заявки</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+							</div>           
+						</div>
+						<div class="column column__1-2 column__no-padding white img-column">           
+							<div class="img-wrap">
+								<img src="images/img-4.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Intercharm украина-2015: консультации по открытию и развитию салонов красоты</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+							</div>           
+						</div>
+					</div>
+					{% endif %}
+
+					{% if showTabVertical %}
+					<div class="tab_container__right-block_vertical column__1-2 column__no-padding">
+						<div class="column column-block column__no-padding white">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div>        
+						</div>
+						<div class="column column-block column__no-padding white">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div> 
+						</div>
+						<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>                    
+					</div>
+			{% endif %} 
+			</div>
+		</div> 
+		<!-- #tab2 -->
+		<h3 class="tab_drawer_heading" rel="tab3">Оборудование</h3>
+		 <div id="tab3" class="tab_content">
+			<div class="column-wrap flex">
+					<div class="column {{className}} column__no-padding">
+						<span class="title-label">Оборудование</span>
+						<h2 class="title-lg title-lg__thin title-lg__white">Покупка салона красоты</h2>
+						<p class="text-16 text-16__light-blue">Инвестиция в салонный бизнес всегда считалась хорошим вложением денег в Украине. Спрос на услуги постоянный.</p>
+						{% if showTabBtn %}
+							<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>
+						{% endif %}
+					</div>
+					{% if showTabHorisontal %}
+					<div class="tab_container__right-block_horisontal column__2-3 column__no-padding">
+						<div class="column column__1-2 column__no-padding white img-column">            
+							<div class="img-wrap">
+								<img src="images/img-3.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Купить салон красоты или открыть с нуля: оценка и форма заявки</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+							</div>           
+						</div>
+						<div class="column column__1-2 column__no-padding white img-column">           
+							<div class="img-wrap">
+								<img src="images/img-4.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Intercharm украина-2015: консультации по открытию и развитию салонов красоты</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+							</div>           
+						</div>
+					</div>
+					{% endif %}
+
+					{% if showTabVertical %}
+					<div class="tab_container__right-block_vertical column__1-2 column__no-padding">
+						<div class="column column-block column__no-padding white">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div>        
+						</div>
+						<div class="column column-block column__no-padding white">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div> 
+						</div>						
+							<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>						               
+					</div>
+			{% endif %} 
+			</div>
+		</div>   
+		<!-- #tab3 -->
+		<h3 class="tab_drawer_heading" rel="tab4">Поставщики</h3>
+		<div id="tab4" class="tab_content">
+			<div class="column-wrap flex">
+					<div class="column {{className}} column__no-padding">
+						<span class="title-label">Поставщики</span>
+						<h2 class="title-lg title-lg__thin title-lg__white">Покупка салона красоты</h2>
+						<p class="text-16 text-16__light-blue">Инвестиция в салонный бизнес всегда считалась хорошим вложением денег в Украине. Спрос на услуги постоянный.</p>
+						{% if showTabBtn %}
+							<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>
+						{% endif %}
+					</div>
+					{% if showTabHorisontal %}
+					<div class="tab_container__right-block_horisontal column__2-3 column__no-padding">
+						<div class="column column__1-2 column__no-padding white img-column">            
+							<div class="img-wrap">
+								<img src="images/img-3.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Купить салон красоты или открыть с нуля: оценка и форма заявки</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+							</div>           
+						</div>
+						<div class="column column__1-2 column__no-padding white img-column">           
+							<div class="img-wrap">
+								<img src="images/img-4.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Intercharm украина-2015: консультации по открытию и развитию салонов красоты</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+							</div>           
+						</div>												
+					</div>
+					{% endif %}
+
+					{% if showTabVertical %}
+					<div class="tab_container__right-block_vertical column__1-2 column__no-padding">
+						<div class="column column-block column__no-padding white">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div>        
+						</div>
+						<div class="column column-block column__no-padding white">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div> 
+						</div>							
+							<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>						                
+					</div>
+			{% endif %} 
+			</div>
+		</div> 
+		<!-- #tab4 -->
+		<h3 class="tab_drawer_heading" rel="tab5">Покупка салона</h3>
+		<div id="tab5" class="tab_content">
+			<div class="column-wrap flex">
+					<div class="column {{className}} column__no-padding">
+						<span class="title-label">Покупка салона</span>
+						<h2 class="title-lg title-lg__thin title-lg__white">Покупка салона красоты</h2>
+						<p class="text-16 text-16__light-blue">Инвестиция в салонный бизнес всегда считалась хорошим вложением денег в Украине. Спрос на услуги постоянный.</p>
+						{% if showTabBtn %}
+							<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>
+						{% endif %}
+					</div>
+					{% if showTabHorisontal %}
+					<div class="tab_container__right-block_horisontal column__2-3 column__no-padding">
+						<div class="column column__1-2 column__no-padding white img-column">            
+							<div class="img-wrap">
+								<img src="images/img-3.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Купить салон красоты или открыть с нуля: оценка и форма заявки</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+							</div>           
+						</div>
+						<div class="column column__1-2 column__no-padding white img-column">           
+							<div class="img-wrap">
+								<img src="images/img-4.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Intercharm украина-2015: консультации по открытию и развитию салонов красоты</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+							</div>           
+						</div>
+					</div>
+					{% endif %}
+
+					{% if showTabVertical %}
+					<div class="tab_container__right-block_vertical column__1-2 column__no-padding">
+						<div class="column column-block column__no-padding white">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div>        
+						</div>
+						<div class="column column-block column__no-padding white">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div> 
+						</div>						
+							<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>					                  
+					</div>
+			{% endif %} 
+			</div>
+		</div>  
+		<!-- #tab5 -->
+		<h3 class="tab_drawer_heading" rel="tab6">Мастера</h3>
+		<div id="tab6" class="tab_content">
+			<div class="column-wrap flex">
+					<div class="column {{className}} column__no-padding">
+						<span class="title-label">Мастера</span>
+						<h2 class="title-lg title-lg__thin title-lg__white">Покупка салона красоты</h2>
+						<p class="text-16 text-16__light-blue">Инвестиция в салонный бизнес всегда считалась хорошим вложением денег в Украине. Спрос на услуги постоянный.</p>
+						{% if showTabBtn %}
+							<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>
+						{% endif %}
+					</div>
+					{% if showTabHorisontal %}
+					<div class="tab_container__right-block_horisontal column__2-3 column__no-padding">
+						<div class="column column__1-2 column__no-padding white img-column">            
+							<div class="img-wrap">
+								<img src="images/img-3.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Купить салон красоты или открыть с нуля: оценка и форма заявки</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+							</div>           
+						</div>
+						<div class="column column__1-2 column__no-padding white img-column">           
+							<div class="img-wrap">
+								<img src="images/img-4.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Intercharm украина-2015: консультации по открытию и развитию салонов красоты</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+							</div>           
+						</div>
+					</div>
+					{% endif %}
+
+					{% if showTabVertical %}
+					<div class="tab_container__right-block_vertical column__1-2 column__no-padding">
+						<div class="column column-block column__no-padding white">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div>        
+						</div>
+						<div class="column column-block column__no-padding white">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div> 
+						</div>						
+							<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>						               
+					</div>
+			{% endif %} 
+			</div>
+		</div> 
+		<!-- #tab6 -->
+		{% if tabCount %}
+		<h3 class="tab_drawer_heading" rel="tab7">Франшиза</h3>
+		<div id="tab7" class="tab_content">
+			<div class="column-wrap flex">
+					<div class="column {{className}} column__no-padding">
+						<span class="title-label">Франшиза</span>
+						<h2 class="title-lg title-lg__thin title-lg__white">Покупка салона красоты</h2>
+						<p class="text-16 text-16__light-blue">Инвестиция в салонный бизнес всегда считалась хорошим вложением денег в Украине. Спрос на услуги постоянный.</p>
+							{% if showTabBtn %}
+							<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>
+						{% endif %}
+					</div>
+					{% if showTabHorisontal %}
+					<div class="tab_container__right-block_horisontal column__2-3 column__no-padding">
+						<div class="column column__1-2 column__no-padding white img-column">            
+							<div class="img-wrap">
+								<img src="images/img-3.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Купить салон красоты или открыть с нуля: оценка и форма заявки</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+							</div>           
+						</div>
+						<div class="column column__1-2 column__no-padding white img-column">           
+							<div class="img-wrap">
+								<img src="images/img-4.jpg" alt="">
+							</div>
+							<div class="img-column__description-wrap">
+								<a href="" class="title-19">Intercharm украина-2015: консультации по открытию и развитию салонов красоты</a>
+								<div class="info-block">
+									<span class="text-13">А. Коршунова</span>										
+								</div>
+								<div class="data-block">
+									<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+								</div>
+							</div>           
+						</div>
+					</div>
+					{% endif %}
+
+					{% if showTabVertical %}
+					<div class="tab_container__right-block_vertical column__1-2 column__no-padding">
+						<div class="column column-block column__no-padding white">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div>        
+						</div>
+						<div class="column column-block column__no-padding white">            
+							<div class="column-block__wrap flex">
+								<div class="img-wrap">
+									<img src="images/img-1.jpg" alt="">
+								</div>
+								<div class="column-block__content-wrap">
+									<a href="#" class="title-17">Салонный маркетинг — Генеральный Партнер бизнес-школы “Beauty Salon Boss”</a>
+									<div class="data-block">
+										<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+									</div>
+									<div class="tags-block">
+										<a href="#" class="tag">#Управление салонами</a>
+									</div>
+								</div>							
+							</div> 
+						</div>
+							<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все материалы по теме</a>                   
+					</div>
+			{% endif %} 
+			</div>
+		</div>  
+		<!-- #tab7 -->
+		{% endif %} 
+	</div>
+	<!-- .tab_container -->
+{% endmacro %}
+
+{% macro eventSection(className="", bordered=[], eventOneBlock=true, eventTwoBlock=true) %}
+<div class="event-section white">	
+	<div class="all-shadow"></div>
+	{% if eventOneBlock %}
+	<div class="event-block {{ "no-top-border" if bordered.indexOf(1) > -1 else "" }}">		
+		<h3 class="content-title content-title__pink content-title__left animated-in-slideInLeft">События бьюти-рынка</h3>							
+		<div class="event__calendar-block trans animated-in-zoomIn">
+			<div class="event__data-wrap">
+				<span class="num">05</span>
+				<span class="monh">февраля</span>
+				<span class="year">2017</span>
+			</div>
+			<div class="event__info-block">
+				<span class="event__label dark-blue">Семинар</span>
+				<a href="" class="title-sm">Meder beauty science – революциии инновации в космецевтике</a>
+				<div class="event__info-wrap">
+					<span class="event__info-block_text">Организатор:</span>
+					<span class="event__info-block_value">Ивано-Франковск, Бизнес-центр</span>
+				</div>
+			</div>
+			<div class="event__add-block">
+				<span class="event__calendar-block_price">1500 грн.</span>
+				<div class="event__button-block">
+					<a href="#" class="button hvr-rectangle-out button__pink-blue">Записаться</a>
+					<a href="" class="label-block__link trans">
+						<i class="fa fa-plus" aria-hidden="true"></i>добавить в
+						<span>Google Календарь</span>
+					</a>
+				</div>				
+			</div>		
+		</div>
+		<div class="event__calendar-block trans animated-in-zoomIn">
+			<div class="event__data-wrap">
+					<span class="num">05</span>
+					<span class="monh">февраля</span>
+					<span class="year">2017</span>
+				</div>
+				<div class="event__info-block">
+					<span class="event__label blue">Семинар</span>
+					<a href="" class="title-sm">Meder beauty science – революциии инновации в космецевтике</a>
+					<div class="event__info-wrap">
+						<span class="event__info-block_text">Организатор:</span>
+						<span class="event__info-block_value">Ивано-Франковск, Бизнес-центр</span>
+					</div>
+				</div>                                
+				<div class="event__add-block">
+				<span class="event__calendar-block_price">1500 грн.</span>
+					<div class="event__button-block">
+						<a href="#" class="button hvr-rectangle-out button__pink-blue">Записаться</a>
+						<a href="" class="label-block__link trans">
+							<i class="fa fa-plus" aria-hidden="true"></i>добавить в
+							<span>Google Календарь</span>
+						</a>
+					</div>				
+				</div>	
+			</div>     
+		<div class="event__calendar-block trans animated-in-zoomIn">
+				<div class="event__data-wrap">
+					<span class="num">05</span>
+					<span class="monh">февраля</span>
+					<span class="year">2017</span>
+				</div>
+				<div class="event__info-block">
+					<span class="event__label pink">Треннинг</span>
+					<a href="" class="title-sm">Стандарты сервиса салона красотыили правда о любви к клиентам</a>
+					<div class="event__info-wrap">
+						<span class="event__info-block_text">Организатор:</span>
+						<span class="event__info-block_value">Ивано-Франковск, Бизнес-центр</span>
+					</div>
+				</div>                                
+				<div class="event__add-block">
+				<span class="event__calendar-block_price">1500 грн.</span>
+				<div class="event__button-block">
+					<a href="#" class="button hvr-rectangle-out button__pink-blue">Записаться</a>
+					<a href="" class="label-block__link trans">
+						<i class="fa fa-plus" aria-hidden="true"></i>добавить в
+						<span>Google Календарь</span>
+					</a>
+				</div>				
+			</div>	
+		</div>                                 
+	</div>
+	{% endif %}
+	<div class="event-block {{ "no-top-border" if bordered.indexOf(2) > -1 else "" }}">					
+		<h3 class="content-title content-title__dark-blue content-title__left animated-in-slideInLeft">МЫ РЕКОМЕНДУЕМ ПОСЕТИТЬ</h3>
+		<ul class="event__list">
+			<li class="event__item animated-in-fadeInDown">
+				<a href="" class="title-19 title-19">Lamour: материалы для наращивания ресниц премиум-класса</a>
+				<span class="event__price">1800 грн.</span>
+				<div class="info-block flex">
+					<span class="text-14">Организатор</span>
+					<div class="data-block">
+						<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+					</div>
+					<span class="text-14">Ивано-Франковск, Бизнес центр</span>													
+				</div>
+				<a href="#" class="button hvr-rectangle-out button__pink-transparent">Записаться</a>
+				<a href="" class="label-block__link trans">
+					<i class="fa fa-plus" aria-hidden="true"></i>добавить в
+					<span>Google Календарь</span>
+				</a>
+			</li>
+			<li class="event__item animated-in-fadeInUp">
+				<a href="" class="title-19 title-19">Почему мастера уходят из салонов красоты?</a>
+				<span class="event__price">2300 грн.</span>
+				<div class="info-block flex">
+					<span class="text-14">Организатор</span>
+					<div class="data-block">
+						<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+					</div>
+					<span class="text-14">Ивано-Франковск, Бизнес центр</span>													
+				</div>
+				<a href="#" class="button hvr-rectangle-out button__pink-transparent">Записаться</a>
+				<a href="" class="label-block__link trans">
+					<i class="fa fa-plus" aria-hidden="true"></i>добавить в
+					<span>Google Календарь</span>
+				</a>
+			</li>
+			<li class="event__item animated-in-fadeInDown">
+				<a href="" class="title-19 title-19">Как правильно оформить трудовые отношения с персоналом салона </a>
+				<span class="event__price">1800 грн.</span>
+				<div class="info-block flex">
+					<span class="text-14">Организатор</span>
+					<div class="data-block">
+						<span class="data"><i class="fa fa-calendar"></i>05 марта 2017</span>
+					</div>
+					<span class="text-14">Ивано-Франковск, Бизнес центр</span>													
+				</div>
+				<a href="#" class="button hvr-rectangle-out button__pink-transparent">Записаться</a>
+				<a href="" class="label-block__link trans">
+					<i class="fa fa-plus" aria-hidden="true"></i>добавить в
+					<span>Google Календарь</span>
+				</a>
+			</li>							
+		</ul>
+	</div>
+	{% if eventTwoBlock %}
+	<div class="event-block {{ "no-top-border" if bordered.indexOf(3) > -1 else "" }}">
+
+		<h3 class="content-title content-title__pink content-title__left animated-in-slideInLeft">Недавно добавленные</h3>							
+		<div class="event__calendar-block trans animated-in-zoomIn">
+			<div class="event__data-wrap">
+				<span class="num">05</span>
+				<span class="monh">февраля</span>
+				<span class="year">2017</span>
+			</div>
+			<div class="event__info-block">
+				<span class="event__label dark-blue">Семинар</span>
+				<a href="" class="title-sm">Meder beauty science – революциии инновации в космецевтике</a>
+				<div class="event__info-wrap">
+					<span class="event__info-block_text">Организатор:</span>
+					<span class="event__info-block_value">Ивано-Франковск, Бизнес-центр</span>
+				</div>
+			</div>                                
+			<div class="event__add-block">
+				<span class="event__calendar-block_price">1500 грн.</span>
+				<div class="event__button-block">
+					<a href="#" class="button hvr-rectangle-out button__pink-blue">Записаться</a>
+					<a href="" class="label-block__link trans">
+						<i class="fa fa-plus" aria-hidden="true"></i>добавить в
+						<span>Google Календарь</span>
+					</a>
+				</div>				
+			</div>	
+		</div>
+		<div class="event__calendar-block trans animated-in-zoomIn">
+			<div class="event__data-wrap">
+					<span class="num">05</span>
+					<span class="monh">февраля</span>
+					<span class="year">2017</span>
+				</div>
+				<div class="event__info-block">
+					<span class="event__label blue">Семинар</span>
+					<a href="" class="title-sm">Meder beauty science – революциии инновации в космецевтике</a>
+					<div class="event__info-wrap">
+						<span class="event__info-block_text">Организатор:</span>
+						<span class="event__info-block_value">Ивано-Франковск, Бизнес-центр</span>
+					</div>
+				</div>                                
+				<div class="event__add-block">
+				<span class="event__calendar-block_price">1500 грн.</span>
+					<div class="event__button-block">
+						<a href="#" class="button hvr-rectangle-out button__pink-blue">Записаться</a>
+						<a href="" class="label-block__link trans">
+							<i class="fa fa-plus" aria-hidden="true"></i>добавить в
+							<span>Google Календарь</span>
+						</a>
+					</div>				
+				</div>		
+			</div>     
+		<div class="event__calendar-block trans animated-in-zoomIn">
+				<div class="event__data-wrap">
+					<span class="num">05</span>
+					<span class="monh">февраля</span>
+					<span class="year">2017</span>
+				</div>
+				<div class="event__info-block">
+					<span class="event__label pink">Треннинг</span>
+					<a href="" class="title-sm">Стандарты сервиса салона красотыили правда о любви к клиентам</a>
+					<div class="event__info-wrap">
+						<span class="event__info-block_text">Организатор:</span>
+						<span class="event__info-block_value">Ивано-Франковск, Бизнес-центр</span>
+					</div>
+				</div>                                
+				<div class="event__add-block">
+				<span class="event__calendar-block_price">1500 грн.</span>
+					<div class="event__button-block">
+						<a href="#" class="button hvr-rectangle-out button__pink-blue">Записаться</a>
+						<a href="" class="label-block__link trans">
+							<i class="fa fa-plus" aria-hidden="true"></i>добавить в
+							<span>Google Календарь</span>
+						</a>
+					</div>				
+			</div>	
+		</div>                                 
+	</div>
+	{% endif %}	
+</div>
+{% endmacro %}
+
+
+{% macro sponsorBlock(className="", sponsorBlockText=false ) %}
+			<ul class="sponsor__list">
+				<li class="sponsor__item animated-in-zoomIn">
+					<a href="">
+						<div class="img-wrap">
+								<img src="images/logo-1.png" alt="">
+						</div>					
+							{% if sponsorBlockText %}
+							<span class="sponsor__text">Евромедсервис</span>
+							{% endif %}	
+					</a>							
+				</li>
+				<li class="sponsor__item animated-in-zoomIn">
+					<a href="">
+						<div class="img-wrap">
+								<img src="images/logo-2.png" alt="">
+						</div>	
+						{% if sponsorBlockText %}
+							<span class="sponsor__text">Укрсалон</span>
+							{% endif %}	
+					</a>							
+				</li>
+				<li class="sponsor__item animated-in-zoomIn">
+					<a href="">
+					<div class="img-wrap">
+								<img src="images/logo-3.png" alt="">
+						</div>	
+							{% if sponsorBlockText %}
+							<span class="sponsor__text">Лидер</span>
+							{% endif %}	
+					</a>							
+				</li>
+				<li class="sponsor__item animated-in-zoomIn">
+					<a href="">
+						<div class="img-wrap">
+								<img src="images/logo-4.png" alt="">
+						</div>	
+							{% if sponsorBlockText %}
+							<span class="sponsor__text">Мєдисон</span>
+							{% endif %}	
+					</a>							
+				</li>
+			</ul>
+			<ul class="sponsor__list sponsor__list_last">
+				<li class="sponsor__item animated-in-zoomIn">
+					<a href="">
+					<div class="img-wrap">
+								<img src="images/logo-5.png" alt="">
+						</div>	
+							{% if sponsorBlockText %}
+							<span class="sponsor__text">Восток</span>
+							{% endif %}	
+					</a>							
+				</li>
+				<li class="sponsor__item animated-in-zoomIn">
+					<a href="">
+						<div class="img-wrap">
+								<img src="images/logo-6.png" alt="">
+						</div>	
+							{% if sponsorBlockText %}
+							<span class="sponsor__text">Все для салона</span>
+							{% endif %}	
+					</a>							
+				</li>
+				<li class="sponsor__item animated-in-zoomIn">
+					<a href="">
+						<div class="img-wrap">
+								<img src="images/logo-7.png" alt="">
+						</div>	
+							{% if sponsorBlockText %}
+							<span class="sponsor__text">Shine Style</span>
+							{% endif %}	
+					</a>							
+				</li>
+				<li class="sponsor__item animated-in-zoomIn">
+					<a href="">
+						<div class="img-wrap">
+								<img src="images/logo-8.png" alt="">
+						</div>	
+							{% if sponsorBlockText %}
+							<span class="sponsor__text">Beaty&Sun</span>
+							{% endif %}	
+					</a>							
+				</li>
+			</ul>
+			<div class="button-wrap">
+					<a href="#" class="button hvr-rectangle-out button__dark-blue-transparent arrow">Cмотреть все</a>
+			</div>		
+	
+	{% endmacro %}
+
+	{% macro vacansiesBlock(className="blue", vacansiesBlockButton=true, vacansiesPageButton=false ) %}		
+		<div class="vacancies__wrap">
+			<div class="vacancies__column animated-in-fadeInLeft">
+				<h4 class="title-23 title-23__thin title-23__pink animated-in-fadeIn">Админперсонал</h4>
+				<ul class="vacancies__list">
+					<li class="vacancies__item animated-in-fadeIn">
+						<a href="" class="text-17 trans">Системный администратор</a>
+						<div class="vacancies__info-block">
+							<span class="vacancies__info-block-text">Юг-контракт</span>
+							<span class="vacancies__info-block-text">Тернополь</span>
+							<span class="vacancies__info-block-text">Вчера</span>
+						</div>
+					</li>
+					<li class="vacancies__item animated-in-fadeIn">
+						<a href="" class="text-17 trans">Копирайтер, рерайтер, контент-менеджер, администратор сайта</a>
+						<div class="vacancies__info-block">
+							<span class="vacancies__info-block-text">Юг-контракт</span>
+							<span class="vacancies__info-block-text">Тернополь</span>
+							<span class="vacancies__info-block-text">Вчера</span>
+						</div>
+					</li>
+					<li class="vacancies__item animated-in-fadeIn">
+						<a href="" class="text-17 trans">Системный администратор</a>
+						<div class="vacancies__info-block">
+							<span class="vacancies__info-block-text">Юг-контракт</span>
+							<span class="vacancies__info-block-text">Тернополь</span>
+							<span class="vacancies__info-block-text">Вчера</span>
+						</div>
+					</li>
+				</ul>
+				{% if vacansiesBlockButton %}	
+				<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow animated-in-fadeIn">Все вакансии</a>				
+				{% endif %}
+			</div>
+			<div class="vacancies__column animated-in-fadeInRight {{className}}">
+				<h4 class="title-23 title-23__thin title-23__blue animated-in-fadeIn">Мастера</h4>
+				<ul class="vacancies__list">
+					<li class="vacancies__item animated-in-fadeIn">
+						<a href="" class="text-17 trans">Системный администратор</a>
+						<div class="vacancies__info-block">
+							<span class="vacancies__info-block-text">Юг-контракт</span>
+							<span class="vacancies__info-block-text">Тернополь</span>
+							<span class="vacancies__info-block-text">Вчера</span>
+						</div>
+					</li>
+					<li class="vacancies__item animated-in-fadeIn">
+						<a href="" class="text-17 trans">Копирайтер, рерайтер, контент-менеджер, администратор сайта</a>
+						<div class="vacancies__info-block">
+							<span class="vacancies__info-block-text">Юг-контракт</span>
+							<span class="vacancies__info-block-text">Тернополь</span>
+							<span class="vacancies__info-block-text">Вчера</span>
+						</div>
+					</li>
+					<li class="vacancies__item animated-in-fadeIn">
+						<a href="" class="text-17 trans">Системный администратор</a>
+						<div class="vacancies__info-block">
+							<span class="vacancies__info-block-text">Юг-контракт</span>
+							<span class="vacancies__info-block-text">Тернополь</span>
+							<span class="vacancies__info-block-text">Вчера</span>
+						</div>
+					</li>							
+				</ul>
+				{% if vacansiesBlockButton %}	
+				<a href="#" class="button hvr-rectangle-out button__blue-transparent arrow animated-in-fadeIn">Все вакансии</a>						
+				{% endif %}
+			</div>
+			{% if vacansiesPageButton %}
+				<div class="button-wrap animated-in-fadeIn">
+					<a href="#" class="button hvr-rectangle-out button__pink-transparent arrow">Все вакансии</a>
+				</div>	
+			{% endif %}
+		</div>
+		
+	{% endmacro %}

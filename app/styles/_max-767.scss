@@ -1,0 +1,29 @@
+$icon-font-path: '../fonts/';
+
+@import "_includs";
+
+
+@media only screen and (max-width: 767px) {
+
+    .modal-dialog {
+        margin: 10px !important;
+    }
+
+    .col-60 {
+        width: 100%;
+
+        &.pr {
+            padding-right: 0;
+        }
+    }
+
+    .col-40 {
+        width: 100%;
+    }
+
+    .order {
+        order: -1;
+    }
+	
+}	
+

@@ -1,0 +1,164 @@
+	{% extends "template.html" %}	
+	{% import "macros.html" as myMacros %}
+
+	{% block content %}
+	<main class="main select-page">
+            {% include "title-block.html" %}		
+		<div class="pagewrap flex aifs">
+            <div class="col-60 content-wrap mt pr">
+                <h2 class="content-title center">Выберите услугу</h2>            
+                    <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                              <div class="panel-header">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">
+                                        <span>Наращивание ресниц</span>    
+                                        <i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </h4>
+                              </div>
+                              <div id="collapseOne" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="panel__list">
+                                        <li class="panel__item">
+                                            <div class="checkbox-block">
+                                                <label class="control control--radio">
+                                                    <input type="radio" name="radio" checked="checked"/>
+                                                    <div class="control__indicator"></div>
+                                                </label>  
+                                                <label for="" class="label ml bold">Наращивание light</label>
+                                            </div>
+                                            <div class="content-block pl">
+                                                <p>300-400 грн</p>                                                
+                                            </div>
+                                            <div class="content-block pl">                                                
+                                                <p>Примечание</p>
+                                                <a href="">Об услуге</a>
+                                            </div>                                           
+                                        </li>
+                                        <li class="panel__item">
+                                            <div class="checkbox-block">
+                                                <label class="control control--radio">
+                                                    <input type="radio" name="radio" checked="checked"/>
+                                                    <div class="control__indicator"></div>
+                                                </label>
+                                                <label for="" class="label ml bold">Наращивание classic</label>
+                                            </div>
+                                            <div class="content-block pl">
+                                                <p>300-400 грн</p>                                                
+                                            </div>
+                                            <div class="content-block pl">                                                
+                                                <p>Примечание</p>
+                                                <a href="">Об услуге</a>
+                                            </div>                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-header">
+                                <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">                                          
+                                          <span>Моделирование бровей</span>    
+                                            <i class="fa fa-chevron-right"></i>
+                                        </a>
+                                      </h4>
+                              </div>
+                              <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="panel__list">
+                                        <li class="panel__item">
+                                            <div class="checkbox-block">
+                                                <label class="control control--radio">
+                                                    <input type="radio" name="radio" checked="checked"/>
+                                                    <div class="control__indicator"></div>
+                                                </label>
+                                                <label for="" class="label ml bold">Моделирование-1</label>
+                                            </div>
+                                            <div class="content-block pl">
+                                                <p>300-400 грн</p>                                                
+                                            </div>
+                                            <div class="content-block pl">                                                
+                                                <p>Примечание</p>
+                                                <a href="">Об услуге</a>
+                                            </div>                                            
+                                        </li>
+                                        <li class="panel__item">
+                                            <div class="checkbox-block">
+                                                <label class="control control--radio">
+                                                    <input type="radio" name="radio" checked="checked"/>
+                                                    <div class="control__indicator"></div>
+                                                </label>
+                                                <label for="" class="label ml bold">Моделирование-2</label>
+                                            </div>
+                                            <div class="content-block pl">
+                                                <p>300-400 грн</p>                                                
+                                            </div>
+                                            <div class="content-block pl">                                                
+                                                <p>Примечание</p>
+                                                <a href="">Об услуге</a>
+                                            </div>                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-header">
+                                <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
+                                            <span>Макияж</span>    
+                                            <i class="fa fa-chevron-right"></i>
+                                        </a>
+                                      </h4>
+                              </div>
+                              <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="panel__list">
+                                        <li class="panel__item">
+                                            <div class="checkbox-block">
+                                               <label class="control control--radio">
+                                                    <input type="radio" name="radio" checked="checked"/>
+                                                    <div class="control__indicator"></div>
+                                                </label>
+                                                <label for="" class="label ml bold">Макияж-1</label>
+                                            </div>
+                                            <div class="content-block pl">
+                                                <p>300-400 грн</p>
+                                            </div>
+                                            <div class="content-block pl"> 
+                                                <p>Примечание</p>
+                                                <a href="">Об услуге</a>
+                                            </div>
+                                        </li>
+                                        <li class="panel__item">
+                                            <div class="checkbox-block">
+                                               <label class="control control--radio">
+                                                    <input type="radio" name="radio" checked="checked"/>
+                                                    <div class="control__indicator"></div>
+                                                </label>
+                                                <label for="" class="label ml bold">Макияж-2</label>
+                                            </div>
+                                            <div class="content-block pl">
+                                                <p>300-400 грн</p>
+                                            </div>
+                                            <div class="content-block pl">
+                                                <p>Примечание</p>
+                                                <a href="">Об услуге</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                    </div> 
+                    <div class="button-wrap row">
+                        <a href="index.html" class="form-button dark trans sm mr">Назад</a>
+                        <a href="select-employee.html" class="form-button trans sm">Далее</a>
+                    </div>
+            </div>
+            {% include "right-block.html" %}
+        </div>
+	</main>
+	 {% endblock %} 

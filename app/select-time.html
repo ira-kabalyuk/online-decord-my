@@ -1,0 +1,173 @@
+	{% extends "template.html" %}	
+	{% import "macros.html" as myMacros %}
+
+	{% block content %}
+	<main class="main select-page">	
+            {% include "title-block.html" %}	
+		<div class="pagewrap flex aifs">
+            <div class="col-60 content-wrap mt pr">
+                <h2 class="content-title center">Выберите дату</h2>   
+                <div class="panel-group">
+                    <div class="panel-header">
+                        <h4 class="panel-title">
+                            <a href="">
+                                <span>Ближайшая свободная</span>
+                            </a>
+                            <label class="control control--checkbox">
+                                <input type="radio" name="sel"/>
+                                <div class="control__indicator"></div>
+                            </label>                           
+                        </h4>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel-header">
+                        <h4 class="panel-title">
+                            <a href="">
+                                <span>Сегодня</span>
+                            </a>
+                            <label class="control control--checkbox">
+                                <input type="radio" name="sel"/>
+                                <div class="control__indicator"></div>
+                            </label>                           
+                        </h4>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel-header">
+                        <h4 class="panel-title">
+                            <a href="">
+                                <span>Завтра</span>
+                            </a>
+                            <label class="control control--checkbox">
+                                <input type="radio" name="sel"/>
+                                <div class="control__indicator"></div>
+                            </label>                           
+                        </h4>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel-header">
+                        <h4 class="panel-title">
+                            <a href="">
+                                <span>На этой неделе</span>
+                            </a>
+                            <label class="control control--checkbox">
+                                <input type="radio" name="sel"/>
+                                <div class="control__indicator"></div>
+                            </label>                           
+                        </h4>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel-header">
+                        <h4 class="panel-title">
+                            <a href="">
+                                <span>На следующей неделе</span>
+                            </a>
+                            <label class="control control--checkbox">
+                                <input type="radio" name="sel"/>
+                                <div class="control__indicator"></div>
+                            </label>                           
+                        </h4>
+                    </div>
+                </div>        
+                <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-header">
+                                <h4 class="panel-title">
+                                    <a href="" data-toggle="modal" data-target="#modalDat">
+                                        <span>Выбрать дату</span> 
+                                        <input class="data-value" type="text" id="data">                                      
+                                        <label class="control control--checkbox">
+                                            <input type="radio" name="sel">
+                                            <div class="control__indicator"></div>
+                                        </label>
+                                    </a>
+                                </h4>
+                            </div>                            
+                        </div>                            
+                </div>
+                           
+
+                <h2 class="content-title mt-50 center">Выберите время</h2>   
+                <div class="panel-group">
+                    <div class="panel-header">
+                        <h4 class="panel-title">
+                            <a href="">
+                                <span>Ближайшее свободное</span>
+                            </a>
+                            <label class="control control--checkbox">
+                                <input type="radio" name="sel1"/>
+                                <div class="control__indicator"></div>
+                            </label>                           
+                        </h4>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel-header">
+                        <h4 class="panel-title">
+                            <a href="">
+                                <span>Сегодня до 12.00</span>
+                            </a>
+                            <label class="control control--checkbox">
+                                <input type="radio" name="sel1"/>
+                                <div class="control__indicator"></div>
+                            </label>                           
+                        </h4>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel-header">
+                        <h4 class="panel-title">
+                            <a href="">
+                                <span>Сегодня после 12.00</span>
+                            </a>
+                            <label class="control control--checkbox">
+                                <input type="radio" name="sel1"/>
+                                <div class="control__indicator"></div>
+                            </label>                           
+                        </h4>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel-header">
+                        <h4 class="panel-title">
+                            <a href="">
+                                <span>На этой неделе</span>
+                            </a>
+                            <label class="control control--checkbox">
+                                <input type="radio" name="sel1"/>
+                                <div class="control__indicator"></div>
+                            </label>                           
+                        </h4>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-header">
+                            <h4 class="panel-title">
+                                <a href="" data-toggle="modal" data-target="#modalTime">
+                                    <span>Выбрать время</span>
+                                    <span class="time-value" type="text" id="time"></span>
+                                    <label class="control control--checkbox">
+                                        <input type="radio" name="sel1"/>
+                                        <div class="control__indicator"></div>
+                                    </label>  
+                                </a>
+                                <!--<input class="time-value" type="text" id="time"> -->                                
+                            </h4>
+                        </div>                            
+                    </div>                            
+                </div>
+               
+                
+                <div class="button-wrap row">
+                    <a href="select-employee.html" class="form-button dark trans sm mr">Назад</a>
+                    <a href="final-page.html" class="form-button trans sm">Далее</a>
+                </div>
+            </div>
+            {% include "right-block.html" %}
+        </div>
+	</main>
+	 {% endblock %} 

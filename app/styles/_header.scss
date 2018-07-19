@@ -1,0 +1,29 @@
+$icon-font-path: '../fonts/';
+
+@import "_includs";
+
+.header {
+    height: 50px;
+    background: #000;
+    color: #fff;   
+    border-bottom: 1px #666 solid;
+    position: relative;
+    z-index: 100;
+    
+    .pagewrap {
+        height: 100%;
+    }  
+
+    .login-block {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        right: 0;
+
+        .login {
+            cursor: pointer;
+        }
+    }
+}
+

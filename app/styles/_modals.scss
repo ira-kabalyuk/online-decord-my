@@ -1,0 +1,80 @@
+$icon-font-path: '../fonts/';
+
+@import "_includs";
+
+.modal-dialog {
+   margin: 100px auto !important; 
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-header {
+    background: $dark-blue;
+    color: #fff;
+    position: relative;
+}
+
+.modal-close {
+    color: #fff;
+    font-size: 40px;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -20px;
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.modal-wrap-block {
+    max-width: 450px;
+    margin: 20px auto;
+
+    .input-wrap {
+        width: 100%;
+    }
+
+    .input {
+        width: 100%;
+    }
+    
+}
+
+.time-button-wrap {   
+    display: flex;
+    flex-wrap: wrap;   
+    margin: 0 -5px;
+}
+
+.time-btn {
+    padding: 10px;
+    background: $blue;
+    text-align: center;
+    border: none;
+    margin: 10px 5px;
+    font-size: 13px;
+    color: #fff;
+    border-radius: 3px;
+    transition: all .4s ease 0s;
+    width: calc(20% - 10px);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: $dark-blue;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &.disabled {
+        background: #ccc;
+        cursor: default;
+    }
+}
+
